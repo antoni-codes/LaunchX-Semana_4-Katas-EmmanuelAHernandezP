@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live 11-03-22 - Semana-4(S3) API</title>
+    <!-- /Stylesheet - CSS/ -->
+    <link rel="stylesheet" href="src/style.css">
+    <style>
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="poke__logo">
+            <img src="./assets/logo.png" alt="Logo Pokemon API ">
+        </div>
+
+        <div class="poke__name">
+            <h1 id="pokeShowName">POKEMON</h1>
+        </div>
+
+        <div class="poke__img">
+            <img id="pokeShowImg" src="./assets/pokeball.png" alt="Pokeball" width="300px">
+        </div>
+
+        <div class="poke__name--is" id="pokeShowNameIs">
+            <p>¿Quién es ese Pokemon?</p>
+        </div>
+
+
+        <div class="poke__data-container">
+
+            <div class="poke__buttons">
+                <div class="poke__type">
+                    <h3>Tipo: </h3>
+                    <p id="pokeShowType"></p>
+                </div>
+                
+                <p class="buttons__title">Busca un Pokemon</p>
+                <div class="buttons__wrapper">
+                    <input class="btn btn__input" type="text" name="pokeGetName" id="pokeGetName"
+                        placeholder="ej. Pikachu">
+                    <button class="btn btn__show" onclick="fetchPokemon()">Mostrar Pokemon</button>
+                </div>
+            </div>
+
+            <div class="poke__info">
+                <div id="pokeShowStat" class="poke__stat"></div>
+                <div class="poke__moves">
+                    <p>Movimientos</p>
+                    <p id="pokeShowMoves"></p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <script src="src/api.js"></script>
+    </footer>
+</body>
+
+</html>

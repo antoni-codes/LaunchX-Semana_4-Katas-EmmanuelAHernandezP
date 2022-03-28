@@ -1,0 +1,289 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:       Pokedex API - Launch X Kata Semana 4
+
+Author:          Emmanuel Hernández
+Website:         www.jeemdev.com
+Primary Color:   #;
+Secondary Color: #;
+Version:         1.0
+main-font:       
+secondary-font:  none
+Headers:         
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+A. GLOBAL
+    1. ROOT
+    2. GLOBAL STYLES
+    3. GLOBAL BUTTONS
+    4. GLOBAL ICONS
+
+B. HTML ELEMENTS STYLING
+    1. SECTION
+    3. HEADER
+
+C. SECTIONS (CUSTOM CLASSES & IDs)
+    1. Header
+    2. Hero
+    3. Clinics Banner
+    4. Why
+    5. Preparations
+    6. Contact
+    7. Footer
+-------------------------------------------------------------------*/
+
+
+/*=============================================
+=         START SECTION | A. GLOBAL           =
+=============================================*/
+
+/*----------  START SUBSECTION | ROOT   ----------*/
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600&family=Source+Sans+Pro:wght@200;400;600;700;900&display=swap');
+
+:root {
+    --text_color-title   : #5b0021;
+    --text_color-p       : #5b0021;
+    --text_family--title : 'Hindi Siliguri', sans-serif;
+    --text_family--p     : 'Source Sans Pro', sans-serif;
+    --text_size-p        : 1.6rem;
+    --text_width-p       : 600;
+    --btn_color-primary  : #5b0021;
+    --btn_color-secondary: #f1f5ff;
+    --icon_color-shadow  : #e0b606;
+}
+
+/*----------  END SUBSECTION | ROOT   ----------*/
+
+/*----------  START SUBSECTION | GLOBAL STYLES   ----------*/
+* {
+    margin            : 0;
+    padding           : 0;
+    -webkit-box-sizing: border-box;
+    box-sizing        : border-box;
+    outline           : none;
+    border            : none;
+    text-decoration   : none;
+    -webkit-transition: .2s linear;
+    transition        : .2s linear;
+}
+
+html {
+    font-size         : 95.5%;
+    overflow-x        : hidden;
+    scroll-behavior   : smooth;
+    scroll-padding-top: 5rem;
+    font-family       : var(--text_family--p);
+}
+
+html::-webkit-scroolbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #1f3e72;
+}
+
+img {
+    max-width: 30%;
+    width    : 30%;
+}
+
+h1 {
+    font-family   : var(--text_family--title);
+    font-size     : 19vw;
+    font-weight   : 700;
+    text-transform: capitalize;
+    color         : #FFF;
+    text-shadow   : 0 10px 20px rgba(0, 0, 0, 0.034);
+}
+
+h2 {
+    font-family  : var(--text_family--title);
+    font-size    : 45px;
+    font-weight  : 800;
+    line-height  : 1.2em;
+    color        : var(--text_color-title);
+    margin-bottom: 4.2rem;
+}
+
+h3 {
+    font-family   : var(--text_family--title);
+    font-size: 1.4em;
+    font-weight: 700;
+    color        : var(--text_color-title);
+}
+
+p {
+    font-family: var(--text_family--p);
+    font-size  : 20px;
+    font-weight: 600;
+    color      : var(--text_color-p);
+    line-height: 3.5rem;
+}
+
+/*----------  END SUBSECTION | GLOBAL STYLES   ----------*/
+
+/*----------  START SUBSECTION | GLOBAL BUTTONS   ----------*/
+.btn {
+    padding      : .8rem 2rem;
+    border-radius: 5px;
+    font-family  : var(--text_family--p);
+    font-size    : 1rem;
+    font-weight  : 600;
+    cursor       : pointer;
+}
+
+.btn__show {
+    background-color: var(--btn_color-primary);
+    color           : #FFF;
+    box-shadow      : 0 10px 20px 0 #1f3d724f;
+    border          : 2px solid var(--btn_color-primary);
+}
+
+.btn__show:hover {
+    border   : 2px solid #fff;
+}
+
+/*----------  END SUBSECTION | GLOBAL BUTTONS   ----------*/
+
+/*----------  START SUBSECTION | GLOBAL ICONS   ----------*/
+.icon__primary {
+    font-size       : 15px;
+    color           : var(--btn_color-primary);
+    background-color: #e6ecff;
+    border-radius   : 7px;
+    width           : 25px;
+    height          : 25px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+.icon__secondary {
+    font-size       : 15px;
+    color           : #ffd012;
+    background-color: #fffae7;
+    border-radius   : 4px;
+    width           : 25px;
+    height          : 25px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+/*----------  END SUBSECTION | GLOBAL ICONS   ----------*/
+/*============ FOOTER SECTION |  A. Global  =========*/
+
+
+
+/*=============================================
+=   START SECTION | B. HTML ELEMENTS STYLING     =
+=============================================*/
+body {
+    background-color: #f5cb07;
+}
+
+section {
+    padding: 2.8rem 4%;
+
+}
+
+/*=====  END OF SECTION HTML B. ELEMENTS STYLING  ======*/
+
+/*=============================================
+=       START SECTION | C. SECTIONS (CUSTOM CLASSES & IDs)      =
+=============================================*/
+.poke__logo img {
+    max-width: 15%;
+}
+
+.poke__name {
+    text-align: center;
+    z-index   : -9;
+    margin-top: 2.5rem;
+}
+
+.poke__img img {
+    position: absolute;
+    top     : 14%;
+    left    : 65%;
+    filter  : drop-shadow(0 15px 25px #22222228);
+}
+
+.poke__name--is {
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.poke__name--is p {
+    font-size  : 2.2em;
+    font-weight: 800;
+}
+
+.poke__type {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.poke__type h3 {
+    margin-right: 1rem;
+}
+
+.poke__data-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.poke__buttons{
+    width: 50%;    
+}
+
+.poke__buttons .buttons__title{
+    font-size: 1.8em;
+    font-weight: 700;
+    padding-bottom: .4rem;
+}
+
+
+.poke__buttons .buttons__wrapper {
+    display        : inline-flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.buttons__wrapper .btn__input {
+    margin-right: .4rem;
+}
+
+.poke__info {
+    display: inline-flex;
+    flex-direction: row;
+    width: 50%;
+    position: relative;
+    top: 0;
+    right: 50;
+}
+
+.poke__info .poke__stat {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.poke__info .poke__stat p {
+    margin-right: 1rem;
+}
+
+/*----------  START SUBSECTION | Header   ----------*/
